@@ -12,6 +12,7 @@ body {
 /* ↓header */
 .header-inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between; 
   align-items: center;
   margin: 20px auto;
@@ -62,6 +63,7 @@ h2 {
 
 .about-inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin:  20px auto;
   padding: 10px;
@@ -84,9 +86,9 @@ h2 {
   font-size: 24px;
 }
 
-
 .works-inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   max-width: 960px;
