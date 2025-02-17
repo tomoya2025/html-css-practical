@@ -4,14 +4,14 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 18px;
+  padding: 0;
+  margin: 0;
 }
-/* ↑全体 */
+
 
 /* ↓header */
 .header-inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between; 
   align-items: center;
   margin: 20px auto;
@@ -20,18 +20,19 @@ body {
 
 h1 {
   border:1px solid black;
+  margin: 0 0 0 20px;
   padding: 0 20px;
 }
 
-.header-inner h1 a {
+.header-inner a {
   color: black;
   font-size: 34px;
-  font-weight: bold;
   text-decoration: none;
 }
 
 nav .menu { 
   display: flex;
+  padding-left: 0;
 }
 
 nav li {
@@ -39,32 +40,31 @@ nav li {
   padding: 0 20px;
 }
 
-nav li a {
+nav a {
   color:black;
   font-size: 34px;
-  font-weight: bold;
   text-decoration: none;
 }
 
 /* ↓画像 */
-.camera img {
-  margin: auto;
+img {
+  margin: 0 auto;
   width: 100%;
 }
 
-/* ↓about */
-.about h2{
+
+h2 {
   margin: 0;
   padding: 60px 0 40px;
   text-align: center;
   font-size: 34px;
 }
 
-.about-inner{
+.about-inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  margin: 0 auto;
+  margin:  20px auto;
+  padding: 10px;
   max-width: 960px;
 }
 
@@ -82,20 +82,11 @@ nav li a {
 
 .name {
   font-size: 24px;
-  font-weight: bold;
 }
 
-/* ↓works */
-.works h2 {
-  margin: 0;
-  padding: 60px 0 40px;
-  text-align: center;
-  font-size: 34px;
-}
 
 .works-inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   max-width: 960px;
@@ -104,11 +95,120 @@ nav li a {
 .item {
   margin: 0 10px;
   padding-bottom: 60px;
+  width: 25%;
+  font-size: 18px;
 }
-
 
 /* footer */
 footer p {
+  font-size: 18px;
   text-align: center;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-family: "Noto Sans JP", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* ↓header */
+  .header-inner {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 20px auto;
+    max-width: 960px;
+  }
+  
+  h1 {
+    border:1px solid black;
+    margin: 0 0 0 20px;
+    padding: 0 20px;
+  }
+  
+  .header-inner a {
+    color: black;
+    font-size: 34px;
+    text-decoration: none;
+  }
+  
+  nav .menu { 
+    display: flex;
+    padding-left: 0;
+  }
+  
+  nav li {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+  nav a {
+    color:black;
+    font-size: 34px;
+    text-decoration: none;
+  }
+  
+  /* ↓画像 */
+  img {
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  
+  h2 {
+    margin: 0;
+    padding: 60px 0 40px;
+    text-align: center;
+    font-size: 34px;
+  }
+  
+  .about-inner {
+    display: flex;
+    align-items: center;
+    margin:  20px auto;
+    padding: 10px;
+    max-width: 960px;
+  }
+  
+  .maru {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .content {
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 18px;
+  }
+  
+  .name {
+    font-size: 24px;
+  }
+  
+  
+  .works-inner {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  
+  .item {
+    margin: 0 10px;
+    padding-bottom: 60px;
+    width: 25%;
+    font-size: 18px;
+  }
+  
+  /* footer */
+  footer p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+
 }
