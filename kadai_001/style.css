@@ -1,133 +1,144 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: "Noto Sans JP", sans-serif;
-  padding: 0;
-  margin: 0;
+  background-color: #ffffff;
+  width: 100%;
 }
-
 
 .header-inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between; 
+  flex-wrap: wrap;
   align-items: center;
   margin: 20px auto;
   max-width: 960px;
 }
 
-h1 {
-  border:1px solid black;
-  margin: 0 0 0 20px;
-  padding: 0 20px;
-}
-
-.header-inner a {
+/* 1.aを使いたい為のh1だからh1に書くのではなくaに書く？　
+　　 ⇒aにスタイルを書き、見出し構造はh１で保つ
+　　 2.aの共通部分と各独立部分　or　各独立部分　
+　　　　⇒各独立部分のほうが左右違った時対応しやすそう　保守性、メンテナンス性◎
+　　  3.homeとmenu同じサイズと色なのに表示が違うのなぜ？
+　　　　⇒
+ */
+.home {
+  font-size: 34px;
   color: black;
-  font-size: 34px;
   text-decoration: none;
-}
-
-nav .menu { 
-  display: flex;
-  padding-left: 0;
-}
-
-nav li {
-  list-style: none;
+  border: 1px solid black;
   padding: 0 20px;
 }
 
-nav a {
-  color:black;
+.menu {
+  list-style: none ;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+/* padding-leftがあるとないで何が違う
+   ⇒リストマーカーの余白分の調整
+   ⇒margin,padding 0 でレスポンシブ対応　
+*/
+
+.menu-in {
   font-size: 34px;
+  color: black;
   text-decoration: none;
 }
 
-
-.camera {
-  margin: 0 auto;
-  width: 100%;
-}
-
-
-h2 {
-  margin: 0;
-  padding: 60px 0 40px;
-  text-align: center;
+.section-title {
   font-size: 34px;
+  text-align: center;
+  padding: 60px 0 40px;
 }
 
+h3 {
+  font-size: 24px;
+}
 
-.about-inner {
+li, p {
+  font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+}
+
+.maru {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.about-inner{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  margin:  20px auto;
+  margin: 20px auto;
   padding: 10px;
   max-width: 960px;
 }
 
-.maru {
-  border-radius: 50%;
-  width: 280px;
-  height: 280px;
-  margin: 0 auto;
+.content{
+  margin: auto;
 }
 
-.content {
-  margin: 0 auto;
-  padding: 0 20px;
-  font-size: 18px;
+ul {
+  margin: 18px 0;
+  padding-left: 40px;
 }
-
-.name {
-  font-size: 24px;
-}
-
 
 .works-inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0 auto;
+  padding: 0;
   max-width: 960px;
 }
 
 .item {
-  margin: 0 10px;
+  width: 25%;
+  padding: 10px;
   padding-bottom: 60px;
-  width: 20%;
-  font-size: 18px;
 }
 
 footer p {
-  font-size: 18px;
   text-align: center;
-  margin-bottom: 20px;
+  padding:20px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width:767px) {
+ 
+.home, .menu-in, .section-title {
+  font-size: 28px;
+}
 
-  .header-inner {
-    flex-direction: column;
-    text-align: center;
-  }
+h3 {
+  font-size: 20px;
+}
 
-  .about-inner {
-    flex-direction: column;
-    text-align: center;
-  }
+li, p {
+  font-size: 16px;
+}
 
-  .works-inner {
-    flex-direction: column;
-    text-align: center;
-  }
+img {
+  width: 100%;
+}
 
-  .item {
-    width: 100%;
-  }
+.header-inner, .about-inner, .works-inner {
+  flex-direction: column;
+}
 
+.item {
+  width: 100%;
+}
 }
