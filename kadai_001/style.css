@@ -109,6 +109,7 @@ ul {
   width: 25%;
   padding: 10px;
   padding-bottom: 60px;
+  text-align: center;
 }
 
 footer p {
@@ -118,23 +119,27 @@ footer p {
 
 @media (max-width:767px) {
  
-.home, .menu-in, .section-title {
+.home, .section-title {
   font-size: 28px;
 }
 
+.menu-in {
+  font-size: 21px;
+}
+
 h3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 li, p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
-img {
-  width: 100%;
+.menu {
+  gap: 10px;
 }
 
-.header-inner, .about-inner, .works-inner {
+.about-inner, .works-inner {
   flex-direction: column;
 }
 
